@@ -1,6 +1,8 @@
 require([
     'tool',
-    'konstante'
-], function (tool, konstante) {
+    'konstante',
+	'test'
+], function (tool, konstante, test) {
     tool(konstante.A);
+	test();
 });
