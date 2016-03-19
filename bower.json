@@ -17,7 +17,7 @@
   ],
 
   "dependencies": {
-    "skeleton": "git@github.com:whatsnewsaes/Skeleton-Less.git",
+    "skeleton-less": "latest",
     "normalize-css": "latest",
     "components-font-awesome": "^4.5.0"
   }
