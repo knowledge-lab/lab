@@ -1,0 +1,24 @@
+{
+  "name": "lab",
+  "authors": [
+    "Ivan Nikitovic <ivan.nikitovic@shiftplanning.com>"
+  ],
+  "description": "nasa mala radionica",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+
+  "dependencies": {
+    "skeleton": "git@github.com:whatsnewsaes/Skeleton-Less.git",
+    "normalize-css": "latest",
+    "components-font-awesome": "^4.5.0"
+  }
+}
