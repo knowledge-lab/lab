@@ -15,10 +15,10 @@
     "test",
     "tests"
   ],
-
   "dependencies": {
     "skeleton-less": "latest",
     "normalize-css": "latest",
-    "components-font-awesome": "^4.5.0"
+    "components-font-awesome": "^4.5.0",
+    "requirejs": "^2.2.0"
   }
 }
