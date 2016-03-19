@@ -1,0 +1,23 @@
+{
+  "name": "klopa",
+  "version": "1.0.0",
+  "description": "Klopa, ocene, jelovnici",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/"
+  },
+  "keywords": [
+    "klopa"
+  ],
+  "author": "Ivan Nikitovic",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-less": "~0.12.0"
+  }
+}
