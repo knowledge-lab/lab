@@ -15,20 +15,22 @@ require([], function () {
     window.a2 = new A();
 
     function B(name, age) {
-        A.call(this, name);
-        this.age = age;
+        if (typeof name === 'string') {
+            this.age = age;
+        }
+        A.call(this, name)
     }
 
-    // B.prototype = new A();
-
-    B.prototype.getName = A.prototype.getName;
+    B.prototype = new A();
+    B.prototype.constructor = B;
+    B.prototype.age = -1;
 
     B.prototype.getAge = function () {
         return this.age;
     };
 
-    window.b1 = new B('b1', 12);
-    window.b2 = new B('b2', 22);
+    window.b1 = new B('b1', 25);
+    window.b2 = new B('');
 });
 
 // console.log(typeof undefined);
