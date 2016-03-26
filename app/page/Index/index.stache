@@ -10,7 +10,7 @@
         <a class="button col-3" href="pages/add-schedule-entry.html">Add Entry</a>
     </div>
     <div class="row">
-        <a class="button col-4 off-2" href="pages/login.html">Sign In</a>
+        <a class="button col-4 off-2" href="/#!login">Sign In</a>
         <a class="button col-4" href="#!signup">Sign Up</a>
     </div>
     <div class="row">

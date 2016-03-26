@@ -9,8 +9,9 @@ define([
 	'page/AddMenu/AddMenu',
 	'page/Signup/Signup',
 	'page/EditFood/EditFood',
-	'page/Index/Index'
-], function (Application, Home, Menus, Food, Schedule, AddFood, EditMenu, AddMenu, Signup, EditFood, Index) {
+	'page/Index/Index',
+	'page/Login/Login'
+], function (Application, Home, Menus, Food, Schedule, AddFood, EditMenu, AddMenu, Signup, EditFood, Index, Login) {
 
 	return Application.extend(
 		{
@@ -55,6 +56,10 @@ define([
 					{
 						controller: Index,
 						route: ''
+					},
+					{
+						controller: Login,
+						route: 'login'
 					}
 				],
 
