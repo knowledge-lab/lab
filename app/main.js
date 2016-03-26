@@ -32,10 +32,34 @@ require([], function () {
 
     b1 = new B(25);
     b2 = new B();
+    b3 = new B(40);
+
+    function Mesto(place) {
+        if(typeof place === 'string') {
+            this.place = place;
+        }
+    }
+
+
+
+    Mesto.prototype= new A();
+    Mesto.prototype.constructor = Mesto;
+
+    Mesto.prototype.place = "Nepoznato";
+
+    Mesto.prototype.getPlace = function () {
+        return this.place;
+    }
+
+
+    c1 = new Mesto("Ustanicka 150");
+    c2 = new Mesto();
 
 
     window.A = A;
     window.B = B;
+
+
 });
 
 // console.log(typeof undefined);
