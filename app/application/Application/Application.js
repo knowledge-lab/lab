@@ -6,9 +6,11 @@ define([
 	'can',
 	'page/Home/Home',
 	'page/Menus/Menus',
-	'page/AddMenu/AddMenu'
-], function (can, Home, Menus, AddMenu) {
-	return can.Control.extend(
+	'page/AddMenu/AddMenu',
+    'page/Schedule/Schedule'
+], function (can, Home, Menus, AddMenu, Schedule) {
+
+    return can.Control.extend(
 		{},
 		{
 			init: function (element, options) {
@@ -26,8 +28,11 @@ define([
 			},
 
 			'add-menu route' : function () {
-				new AddMenu(this.element, this.options);
-			}
-		}
-	);
+                new AddMenu(this.element, this.options);
+            },
+                
+            'schedule route': function () {
+                    new Schedule(this.element, this.options);
+            }
+        });
 });
