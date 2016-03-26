@@ -1,0 +1,26 @@
+<div class="container v-align narrow">
+    <h1>{{nazivAplikacije}}</h1>
+
+    <div class="row">
+        <a class="button col-4" href="/#!menus">Menus</a>
+        <a class="button col-4" href="pages/edit-menu.html">Edit Menu</a>
+        <a class="button col-4" href="pages/add-menu.html">Add Menu</a>
+    </div>
+    <div class="row">
+        <a class="button col-3" href="pages/schedule.html">Schedule</a>
+        <a class="button col-3" href="pages/add-schedule-entry.html">Add Entry</a>
+    </div>
+    <div class="row">
+        <a class="button col-4 off-2" href="pages/login.html">Sign In</a>
+        <a class="button col-4" href="pages/signup.html">Signup</a>
+    </div>
+    <div class="row">
+        <a class="button col-4" href="pages/food.html">Food</a>
+        <a class="button col-4" href="pages/add-food.html">Add Food</a>
+        <a class="button col-4" href="pages/edit-food.html">Edit Food</a>
+    </div>
+
+    <div class="row">
+        <a class="button col-4 off-4" href="pages/home.html">Home</a>
+    </div>
+</div>

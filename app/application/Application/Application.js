@@ -5,23 +5,27 @@
 define([
 	'can',
 	'page/Home/Home',
-	'page/Menus/Menus'
-], function (can, Home, Menus) {
+	'page/Menus/Menus',
+	'page/Index/Index'
+], function (can, Home, Menus, Index) {
 	return can.Control.extend(
 		{},
 		{
 			init: function (element, options) {
-				new Home(element, options);
+				new Index(element, options);
 
 				can.route.ready();
 			},
 
-			'home route' : function () {
-				new Home(this.element, this.options);
+			'index route' : function () {
+				new Index(this.element, this.options);
 			},
 
 			'menus route' : function () {
 				new Menus(this.element, this.options);
+			},
+			'home' : function() {
+			    new Home(this.element, this.options);
 			}
 		}
 	);
