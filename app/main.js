@@ -6,57 +6,43 @@
 });*/
 
 require([], function () {
-    function A(name) {
+    function ime(name) {
         if (typeof name === 'string') {
             this.name = name;
         }
     }
 
-    function ime(name){
-        this.name = name;
+    function  prezime(lastname) {
+        if (typeof latname === 'string') {
+            this.lastname = lastname;
+        }
+
+        ime.call(this,name);
     }
 
-    function  prezime(lastname) {
-        this.lastname = lastname;
+    //window.a1 = new ime('Tanja');
+    prezime.prototype.getFullName = function () {
+        return this.name + this.lastname;
     }
 
     A.prototype.getFullName = function () {
-        return this.name + this.lastname;
+        return this.name + '' + this.lastname;
     }
-    
+
     A.prototype.getName = function () {
         return this.name;
     };
 
     A.prototype.getLastName = function () {
-
+        return this.lastname;
     }
 
     A.prototype.name = 'podrazumevano ime';
 
-    window.a1 = new A('djura');
-    window.a2 = new A();
+
+    window.a4 = new prezime('V');
 
 
-    function B (age) {
-        if (typeof age === 'number') {
-            this.age = age;
-        }
-    }
-
-    B.prototype = new A();
-    B.prototype.constructor = B;
-
-    B.prototype.age = -1;
-
-    B.prototype.getAge = function () {
-        return this.age;
-    };
-
-    b1 = new B(25);
-    b2 = new B();
 
 
-    window.A = A;
-    window.B = B;
 });
