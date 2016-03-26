@@ -16,7 +16,7 @@ module.exports = function (grunt) {
 
         watch: {
             options: {
-                livereload: true
+                livereload: 8081
             },
             styles : {
                 files  : ['assets/**/*.less'],
@@ -31,5 +31,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['less']);
+    grunt.registerTask('default', ['less', 'watch']);
 };
