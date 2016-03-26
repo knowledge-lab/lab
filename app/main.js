@@ -9,29 +9,30 @@ require([], function () {
         return this.name;
     };
 
-    A.prototype.name = 'podrazumevano ime';
+    A.prototype.name = 'Default name';
 
-    window.a1 = new A('djura');
+    window.a1 = new A('Djura');
     window.a2 = new A();
 
 
-    function B (age) {
+    function B (name, age) {
         if (typeof age === 'number') {
             this.age = age;
         }
+        A.call(this, name);
     }
 
-    B.prototype = new A();
-    B.prototype.constructor = B;
+    // B.prototype = new A();
+    // B.prototype.constructor = B;
 
-    B.prototype.age = -1;
+    B.prototype.age = 0;
 
     B.prototype.getAge = function () {
         return this.age;
     };
 
-    b1 = new B(25);
-    b2 = new B();
+    b1 = new B("Djura", 25);
+    b2 = new B("Pera", 13); // nece se setovati
 
 
     window.A = A;
