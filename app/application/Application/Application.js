@@ -5,8 +5,9 @@
 define([
 	'can',
 	'page/Home/Home',
-	'page/Menus/Menus'
-], function (can, Home, Menus) {
+	'page/Menus/Menus',
+	'page/EditMenu/EditMenu'
+], function (can, Home, Menus,EditMenu) {
 	return can.Control.extend(
 		{},
 		{
@@ -22,6 +23,9 @@ define([
 
 			'menus route' : function () {
 				new Menus(this.element, this.options);
+			},
+			'edit-menu route' : function () {
+				new EditMenu(this.element, this.options);
 			}
 		}
 	);
