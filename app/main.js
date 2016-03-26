@@ -23,4 +23,5 @@ requre([], funtion(){
         A.call(this, name);
     }
 
+    
 });
