@@ -6,11 +6,13 @@ define([
 	'can',
 	'page/Home/Home',
 	'page/Menus/Menus',
-	'page/AddMenu/AddMenu',
-    'page/Schedule/Schedule'
-], function (can, Home, Menus, AddMenu, Schedule) {
-
-    return can.Control.extend(
+	'page/Food/Food',
+	'page/Schedule/Schedule',
+	'page/AddFood/AddFood',
+	'page/EditMenu/EditMenu',
+	'page/AddMenu/AddMenu'
+], function (can, Home, Menus, Food, Schedule, AddFood, EditMenu, AddMenu) {
+	return can.Control.extend(
 		{},
 		{
 			init: function (element, options) {
@@ -26,13 +28,24 @@ define([
 			'menus route' : function () {
 				new Menus(this.element, this.options);
 			},
+			'addfood route' : function () {
+				new AddFood(this.element, this.options);
+			},
+
+			'food route' : function () {
+				new Food(this.element, this.options);
+			},
 
 			'add-menu route' : function () {
                 new AddMenu(this.element, this.options);
             },
-                
-            'schedule route': function () {
-                    new Schedule(this.element, this.options);
-            }
-        });
+
+			'schedule route' : function () {
+				new Schedule(this.element, this.options);
+			},
+			'edit-menu route' : function () {
+				new EditMenu(this.element, this.options);
+			}
+		}
+	);
 });
