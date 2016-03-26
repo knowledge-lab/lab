@@ -31,5 +31,34 @@ require([], function () {
 
     window.fja = fja;
     
-    return fja;
+    function inherit(datumRodjenja, gradRodjenja){
+             if (typeof gradRodjenja === 'string') {
+           this.gradRodjenja = gradRodjenja;
+       }
+       if (typeof datumRodjenja === 'array'){
+           this.datumRodjenja = gradRodjenja;
+       }  
+        
+    }
+    window.inherit = inherit;
+    
+            inherit.prototype.getDatum = function () {
+        return this.datumRodjenja;
+    };
+
+    inherit.prototype.datumRodjenja = [1,1,1900];
+    
+        inherit.prototype.getGrad = function () {
+        return this.gradRodjenja;
+    };
+
+    inherit.prototype.gradRodjenja = "Somewhere on the planet earth";
+    
+//    fja.prototype = new inherit();
+   
+    fja.prototype = {
+        getDatum: inherit.getDatum,
+        getGrad: inherit.getGrad
+    }
+        fja.prototype.constructor = fja;
 });
