@@ -14,8 +14,6 @@ require([], function(){
         return this.name;
     }
 
-    window.Osoba = Osoba;
-
     function Student(index, faculty){
         this.index = index;
         this.faculty = faculty;
@@ -28,6 +26,7 @@ require([], function(){
     s.prototype = new Osoba("Djordje", 28, 87728682738989);
 
     window.s = s;
+    window.Osoba = Osoba;
 
 
 });
