@@ -6,8 +6,9 @@ define([
 	'can',
 	'page/Home/Home',
 	'page/Menus/Menus',
-	'page/Food/Food'
-], function (can, Home, Menus, Food) {
+	'page/Food/Food',
+	'page/Schedule/Schedule'
+], function (can, Home, Menus, Food, Schedule) {
 	return can.Control.extend(
 		{},
 		{
@@ -27,9 +28,11 @@ define([
 
 			'food route' : function () {
 				new Food(this.element, this.options);
+			},
+
+			'schedule route' : function () {
+				new Schedule(this.element, this.options);
 			}
-
-
 		}
 	);
 });
