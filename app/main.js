@@ -35,6 +35,8 @@ require([], function () {
 
     b1 = new B('StiviDzi', 25);
     b2 = new B();
+
+    console.log("ssh check");
 });
 
 // console.log(typeof undefined);
