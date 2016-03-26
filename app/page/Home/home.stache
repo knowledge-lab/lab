@@ -16,7 +16,7 @@
     </div>
     <div class="row">
         <a class="button col-4" href="pages/food.html">Food</a>
-        <a class="button col-4" href="pages/add-food.html">Add Food</a>
+        <a class="button col-4" href="#!addfood">Add Food</a>
         <a class="button col-4" href="pages/edit-food.html">Edit Food</a>
     </div>
 
