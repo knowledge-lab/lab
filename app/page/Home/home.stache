@@ -15,13 +15,8 @@
         <a class="button col-4" href="pages/signup.html">Signup</a>
     </div>
     <div class="row">
-<<<<<<< HEAD
-        <a class="button col-4" href="pages/food.html">Food</a>
         <a class="button col-4" href="#!addfood">Add Food</a>
-=======
         <a class="button col-4" href="/#!food">Food</a>
-        <a class="button col-4" href="pages/add-food.html">Add Food</a>
->>>>>>> be95ceb9b0a6bb165c936e68df2a2ea11e8fb8ca
         <a class="button col-4" href="pages/edit-food.html">Edit Food</a>
     </div>
 
