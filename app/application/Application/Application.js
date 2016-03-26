@@ -6,8 +6,13 @@ define([
 	'can',
 	'page/Home/Home',
 	'page/Menus/Menus',
-	'../../page/Add-schedule-entry/Add_schedule_entry'
-], function (can, Home, Menus, Add_schedule_entry) {
+	'page/Add-schedule-entry/Add_schedule_entry',
+	'page/Food/Food',
+	'page/Schedule/Schedule',
+	'page/AddFood/AddFood',
+	'page/EditMenu/EditMenu',
+	'page/AddMenu/AddMenu'
+], function (can, Home, Menus, Food, Schedule, AddFood, EditMenu, AddMenu, Add_schedule_entry) {
 	return can.Control.extend(
 		{},
 		{
@@ -17,16 +22,34 @@ define([
 				can.route.ready();
 			},
 
-			'home route' : function () {
+			'home route': function () {
 				new Home(this.element, this.options);
 			},
 
-			'menus route' : function () {
+			'menus route': function () {
 				new Menus(this.element, this.options);
 			},
 
 			'add_schedule_entry route' : function () {
 				new Add_schedule_entry(this.element, this.options);
+			},
+			'addfood route': function () {
+				new AddFood(this.element, this.options);
+			},
+
+			'food route': function () {
+				new Food(this.element, this.options);
+			},
+
+			'add-menu route': function () {
+				new AddMenu(this.element, this.options);
+			},
+
+			'schedule route': function () {
+				new Schedule(this.element, this.options);
+			},
+			'edit-menu route': function () {
+				new EditMenu(this.element, this.options);
 			}
 		}
 	);
