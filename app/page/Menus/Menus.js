@@ -5,21 +5,33 @@
 define([
 	'../Page/Page',
 	'can',
-	'stache!menus.stache'
-], function (Page, can, content) {
+	'stache!menus.stache',
+	'model/Menu/Menu'
+], function (Page, can, content, Menu) {
 	return Page.extend(
 		{
-			/**
-			 * Handles triggering of the route change
-			 * @returns {Page}
-			 */
-			handleRoute: function handleRoute(element, options) {
-				can.route.attr({ route : ''}, true);
-				return new this(element, options);
-			}
 		},
 		{
-			template : content
+			template : content,
+
+			init : function (element, options) {
+				var isLoading = can.compute(true);
+
+				var promise = Menu.findAll();
+
+				promise.always(
+					function () {
+						isLoading(false);
+					}
+				);
+
+				element.html(
+					this.template({
+						menus: new Menu.List(promise),
+						isLoading: isLoading
+					})
+				);
+			}
 		}
 	);
 });

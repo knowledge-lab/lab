@@ -1,8 +1,20 @@
 {
   "menus": [
     {
-      "name": "djura",
+      "name": "Nesto specijalno",
       "id": 3
+    },
+    {
+      "name": "Neki novi meni",
+      "id": 4
+    },
+    {
+      "name": "nesto sto sada pravimo",
+      "id": 5
+    },
+    {
+      "name": "neko krace ime",
+      "id": 6
     }
   ]
 }
