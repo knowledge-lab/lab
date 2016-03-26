@@ -5,23 +5,58 @@
     tool(konstante.A);
 });*/
 
-requre([], funtion(){
-   function A(name){
+require([], function () {
+    function A(name) {
+        if (typeof name === 'string') {
+            this.name = name;
+        }
+    }
+
+    function ime(name){
         this.name = name;
     }
 
-    A.prototype .name = 'default';
-    A.prototype.getName = function() {
+    function  prezime(lastname) {
+        this.lastname = lastname;
+    }
+
+    A.prototype.getFullName = function () {
+        return this.name + this.lastname;
+    }
+    
+    A.prototype.getName = function () {
         return this.name;
     };
 
-    window.a1 = new A('Zika');
-    window.a2 = new A();
+    A.prototype.getLastName = function () {
 
-    function B(name,age){
-        this.age = age;
-        A.call(this, name);
     }
 
-    
+    A.prototype.name = 'podrazumevano ime';
+
+    window.a1 = new A('djura');
+    window.a2 = new A();
+
+
+    function B (age) {
+        if (typeof age === 'number') {
+            this.age = age;
+        }
+    }
+
+    B.prototype = new A();
+    B.prototype.constructor = B;
+
+    B.prototype.age = -1;
+
+    B.prototype.getAge = function () {
+        return this.age;
+    };
+
+    b1 = new B(25);
+    b2 = new B();
+
+
+    window.A = A;
+    window.B = B;
 });
