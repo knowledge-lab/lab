@@ -1,8 +1,15 @@
-require([
-    'tool',
-    'konstante',
-    'zbir'
-], function (tool, konstante,zbir) {
-    tool(konstante.A);
-    zbir();
-});
+
+require(
+	[
+		'application/Application/Application',
+		'jquery'
+	], function (Application, $) {
+		this.application = new Application(
+			'main',
+			{
+				nazivAplikacije: 'Test'
+			}
+		);
+	}
+);
+

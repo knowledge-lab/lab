@@ -1,0 +1,56 @@
+<div class="container v-align narrow">
+    <div class="row">
+        <h4>
+            <span>Menus</span>
+            <a class="fr fs-5" href="/pages/add-menu.html">
+                <i class="fa fa-plus"></i> Add Menu
+            </a>
+        </h4>
+    </div>
+    <div class="row">
+        <ul>
+            <li>
+                <a href="/pages/edit-menu.html" class="ttu">HORS D’ŒUVRES</a>
+                <ul>
+                    <li>
+                        <a href="/pages/edit-food.html">Berghoff Casserole</a>
+                    </li>
+                    <li>
+                        <a href="/pages/edit-food.html">Salmon and Rock Shrimp Cake</a>
+                    </li>
+                    <li>
+                        <a href="/pages/edit-food.html">Potato Pierogies</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/pages/edit-menu.html" class="ttu">LE BALTHAZAR</a>
+                <ul>
+                    <li>
+                        <a href="/pages/edit-food.html">Berghoff Casserole</a>
+                    </li>
+                    <li>
+                        <a href="/pages/edit-food.html">Salmon and Rock Shrimp Cake</a>
+                    </li>
+                    <li>
+                        <a href="/pages/edit-food.html">Potato Pierogies</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/pages/edit-menu.html" class="ttu">sAUTÉED</a>
+                <ul>
+                    <li>
+                        <a href="/pages/edit-food.html">Berghoff Casserole</a>
+                    </li>
+                    <li>
+                        <a href="/pages/edit-food.html">Salmon and Rock Shrimp Cake</a>
+                    </li>
+                    <li>
+                        <a href="/pages/edit-food.html">Potato Pierogies</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
