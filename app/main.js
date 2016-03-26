@@ -31,7 +31,7 @@ require([], function () {
     };
 
     b1 = new B(25);
-    b2 = new B();
+    b2 = new B(35);
 
 
     window.A = A;
