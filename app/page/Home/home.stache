@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <a class="button col-4 off-2" href="pages/login.html">Sign In</a>
-        <a class="button col-4" href="pages/signup.html">Signup</a>
+        <a class="button col-4" href="#!signup">Signup</a>
     </div>
     <div class="row">
         <a class="button col-4" href="pages/food.html">Food</a>
