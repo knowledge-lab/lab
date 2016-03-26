@@ -1,8 +1,7 @@
 require([
-    'tool',
     'konstante',
 	'test'
-], function (tool, konstante, test) {
-    tool(konstante.A);
-	test();
+], function (konstante, test) {
+    //tool(konstante.A);
+	test;
 });
