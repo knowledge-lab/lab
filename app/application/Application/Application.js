@@ -5,8 +5,9 @@
 define([
 	'can',
 	'page/Home/Home',
-	'page/Menus/Menus'
-], function (can, Home, Menus) {
+	'page/Menus/Menus',
+	'page/Login/Login'
+], function (can, Home, Menus, Login) {
 	return can.Control.extend(
 		{},
 		{
@@ -22,6 +23,9 @@ define([
 
 			'menus route' : function () {
 				new Menus(this.element, this.options);
+			},
+			'login route' : function() {
+				new Login(this.element, this.options);
 			}
 		}
 	);
