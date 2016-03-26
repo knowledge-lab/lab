@@ -21,29 +21,30 @@ define([
 				can.route.ready();
 			},
 
-			'home route' : function () {
+			'home route': function () {
 				new Home(this.element, this.options);
 			},
 
-			'menus route' : function () {
+			'menus route': function () {
 				new Menus(this.element, this.options);
 			},
-			'addfood route' : function () {
+
+			'addfood route': function () {
 				new AddFood(this.element, this.options);
 			},
 
-			'food route' : function () {
+			'food route': function () {
 				new Food(this.element, this.options);
 			},
 
-			'add-menu route' : function () {
-                new AddMenu(this.element, this.options);
-            },
+			'add-menu route': function () {
+				new AddMenu(this.element, this.options);
+			},
 
-			'schedule route' : function () {
+			'schedule route': function () {
 				new Schedule(this.element, this.options);
 			},
-			'edit-menu route' : function () {
+			'edit-menu route': function () {
 				new EditMenu(this.element, this.options);
 			}
 		}
