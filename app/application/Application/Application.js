@@ -4,29 +4,57 @@
 
 define([
 	'can',
-	'page/Home/Home',
-	'page/Menus/Menus',
-	'page/Login/Login'
-], function (can, Home, Menus, Login) {
+	'stache!content.stache'
+], function (can, contentTpl) {
 	return can.Control.extend(
-		{},
+		{
+			defaults: {
+				pages: []
+			}
+		},
 		{
 			init: function (element, options) {
-				new Home(element, options);
+				this.pages = {};
+
+				options.pages.forEach(this.addPage.bind(this));
+
+				element.html(contentTpl({
+					name: options.name
+				}));
+
+				this.on(can.route, 'change', 'onRouteChangeHandler');
 
 				can.route.ready();
 			},
 
-			'home route' : function () {
-				new Home(this.element, this.options);
+			addPage: function (pageConfig) {
+				this.pages[pageConfig.route] = pageConfig.controller;
+				can.route(pageConfig.route);
+			},
+			
+			onRouteChangeHandler: function (routeData, event) {
+				var Page;
+
+				if (this.batchNum !== event.batchNum) {
+					this.batchNum = event.batchNum;
+
+					Page = this.pages[routeData.route];
+
+					if (this.currentPage !== null) {
+						this.currentPage.destroy();
+					}
+
+					if (typeof Page === 'function') {
+						this.currentPage = Page.handleRoute(this.getPageContainer(), routeData.attr());
+					}
+				}
 			},
 
-			'menus route' : function () {
-				new Menus(this.element, this.options);
+			getPageContainer: function () {
+				return this.element.find('main');
 			},
-			'login route' : function() {
-				new Login(this.element, this.options);
-			}
+
+			currentPage : null
 		}
 	);
 });

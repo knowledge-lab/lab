@@ -5,7 +5,7 @@
 define([
 	'../Page/Page',
 	'can',
-	'stache!home.stache'
+	'stache!signup.stache'
 ], function (Page, can, content) {
 	return Page.extend(
 		{
