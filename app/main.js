@@ -3,6 +3,7 @@ require([], function () {
        if (typeof name === 'string') {
            this.name = name;
        }
+
    }
 
     A.prototype.getName = function () {
@@ -15,10 +16,14 @@ require([], function () {
     window.a2 = new A();
 
 
-    function B (age) {
+    function B (name, age) {
+        var ovoSamJa = this;
+
         if (typeof age === 'number') {
             this.age = age;
         }
+
+        A.call(ovoSamJa, name);
     }
 
     B.prototype = new A();
@@ -30,8 +35,10 @@ require([], function () {
         return this.age;
     };
 
-    b1 = new B(25);
+    b1 = new B('pera', 25);
     b2 = new B();
+
+    //{ age : 25, name : 'pera'} <- this
 
 
     window.A = A;
