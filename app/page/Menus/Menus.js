@@ -9,7 +9,14 @@ define([
 ], function (Page, can, content) {
 	return Page.extend(
 		{
-
+			/**
+			 * Handles triggering of the route change
+			 * @returns {Page}
+			 */
+			handleRoute: function handleRoute(element, options) {
+				can.route.attr({ route : ''}, true);
+				return new this(element, options);
+			}
 		},
 		{
 			template : content
