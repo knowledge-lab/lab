@@ -1,5 +1,5 @@
 require([], function () {
-   function A(name) {
+   function A (name) {
        if (typeof name === 'string') {
            this.name = name;
        }
@@ -8,13 +8,13 @@ require([], function () {
     A.prototype.getName = function () {
         return this.name;
     };
-
+    
     A.prototype.name = 'podrazumevano ime';
 
     window.a1 = new A('djura');
     window.a2 = new A();
 
-
+    //------B FUNCTION
     function B (age) {
         if (typeof age === 'number') {
             this.age = age;
@@ -22,7 +22,7 @@ require([], function () {
     }
 
     B.prototype = new A();
-    B.prototype.constructor = B;
+    B.prototype.constructor = B; // If left out, previous line overrides B constructor into A constructor
 
     B.prototype.age = -1;
 
@@ -32,7 +32,6 @@ require([], function () {
 
     b1 = new B(25);
     b2 = new B();
-
 
     window.A = A;
     window.B = B;
