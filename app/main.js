@@ -15,7 +15,7 @@ require([], function () {
     window.a2 = new A();
 
     function B(name, age) {
-        if(typeof age = 'number'){
+        if(typeof age == 'number'){
           this.age = age;
         }
 
@@ -33,8 +33,8 @@ require([], function () {
         return this.age;
     };
 
-    window.b1 = new B('StiviDzi', 25);
-    window.b2 = new B('');
+    b1 = new B('StiviDzi', 25);
+    b2 = new B();
 });
 
 // console.log(typeof undefined);
