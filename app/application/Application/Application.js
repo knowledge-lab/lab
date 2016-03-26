@@ -4,38 +4,57 @@
 
 define([
 	'can',
-	'page/Home/Home',
-	'page/Menus/Menus',
-	'page/Index/Index'
-	'page/Food/Food',
-	'page/Schedule/Schedule'
- function (can, Home, Menus, Food, Schedule, Index) {
+	'stache!content.stache'
+], function (can, contentTpl) {
 	return can.Control.extend(
-		{},
+		{
+			defaults: {
+				pages: []
+			}
+		},
 		{
 			init: function (element, options) {
-				new Index(element, options);
+				this.pages = {};
+
+				options.pages.forEach(this.addPage.bind(this));
+
+				element.html(contentTpl({
+					name: options.name
+				}));
+
+				this.on(can.route, 'change', 'onRouteChangeHandler');
 
 				can.route.ready();
 			},
 
-			'index route' : function () {
-				new Index(this.element, this.options);
+			addPage: function (pageConfig) {
+				this.pages[pageConfig.route] = pageConfig.controller;
+				can.route(pageConfig.route);
+			},
+			
+			onRouteChangeHandler: function (routeData, event) {
+				var Page;
+
+				if (this.batchNum !== event.batchNum) {
+					this.batchNum = event.batchNum;
+
+					Page = this.pages[routeData.route];
+
+					if (this.currentPage !== null) {
+						this.currentPage.destroy();
+					}
+
+					if (typeof Page === 'function') {
+						this.currentPage = Page.handleRoute(this.getPageContainer(), routeData.attr());
+					}
+				}
 			},
 
-			'menus route' : function () {
-				new Menus(this.element, this.options);
+			getPageContainer: function () {
+				return this.element.find('main');
 			},
-			'home' : function() {
-			    new Home(this.element, this.options);
 
-			'food route' : function () {
-				new Food(this.element, this.options);
-			},
-			'schedule route' : function () {
-				new Schedule(this.element, this.options);
-
-			}
+			currentPage : null
 		}
 	);
 });

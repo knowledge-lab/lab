@@ -5,10 +5,11 @@
 define([
 	'../Page/Page',
 	'can',
-	'stache!home.stache'
+	'stache!editfood.stache'
 ], function (Page, can, content) {
 	return Page.extend(
 		{
+
 		},
 		{
 			template : content

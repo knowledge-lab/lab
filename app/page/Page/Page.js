@@ -8,7 +8,13 @@ define([
 ], function (can, content) {
 	return can.Control.extend(
 		{
-
+			/**
+			 * Handles triggering of the route change
+			 * @returns {Page}
+			 */
+			handleRoute: function handleRoute(element, options) {
+				return new this(element, options);
+			}
 		},
 		{
 			init : function (element, options) {
