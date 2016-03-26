@@ -39,7 +39,7 @@ define([
 					},
 					{
 						controller: EditMenu,
-						route: 'edit-menu'
+						route: 'edit-menu/:id'
 					}
 				],
 
