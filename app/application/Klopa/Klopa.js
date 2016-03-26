@@ -7,8 +7,9 @@ define([
 	'page/AddFood/AddFood',
 	'page/EditMenu/EditMenu',
 	'page/AddMenu/AddMenu',
-	'page/Signup/Signup'
-], function (Application, Home, Menus, Food, Schedule, AddFood, EditMenu, AddMenu, Signup) {
+	'page/Signup/Signup',
+	'page/EditFood/EditFood'
+], function (Application, Home, Menus, Food, Schedule, AddFood, EditMenu, AddMenu, Signup, EditFood) {
 
 	return Application.extend(
 		{
@@ -45,6 +46,10 @@ define([
 					{
 						controller: Signup,
 						route: 'signup'
+					},
+					{
+						controller : EditFood,
+						route : 'editfood'
 					}
 				],
 
