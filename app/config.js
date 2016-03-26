@@ -4,6 +4,7 @@ var require = {
     paths: {
         application: 'app/application',
         page: 'app/page',
+        model: 'app/model',
 
         text: 'lib/text/text',
         stache: "lib/requirejs-canjs-templates/stache",

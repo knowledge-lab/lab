@@ -1,0 +1,19 @@
+ <div class="container v-align narrow">
+        <div class="row">
+            <h4 class="col-12">Food info</h4>
+        </div>
+
+        <div class="row">
+            <label class="col-4" for="name">Name: </label>
+            <input class="col-8" type="email" name="name" id="name" autofocus>
+        </div>
+
+        <div class="row">
+            <label class="col-4" for="description">Description: </label>
+            <textarea class="col-8 rsn rh-4" name="description" id="description"></textarea>
+        </div>
+
+        <div class="row">
+            <button class="button-primary off-8 col-4"><i class="fa fa-plus"></i> Add Food</button>
+        </div>
+    </div>
