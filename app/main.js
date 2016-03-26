@@ -33,7 +33,7 @@ require([], function () {
 
     b1 = new B("Djura", 25);
     b2 = new B("Pera", 13); // nece se setovati
-
+    b3 = new A("Djole");
 
     window.A = A;
     window.B = B;
