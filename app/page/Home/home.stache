@@ -3,8 +3,8 @@
 
     <div class="row">
         <a class="button col-4" href="/#!menus">Menus</a>
+        <a class="button col-4" href="/#!add-menu">Add Menu</a>
         <a class="button col-4" href="/#!edit-menu">Edit Menu</a>
-        <a class="button col-4" href="pages/add-menu.html">Add Menu</a>
     </div>
     <div class="row">
         <a class="button col-3" href="/#!schedule">Schedule</a>
