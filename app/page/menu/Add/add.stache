@@ -8,11 +8,16 @@
             <label class="col-6" for="name">Name: </label>
             <input class="col-6" type="text" name="name" id="name" value="{{menu.name}}" autofocus>
         </div>
+		{{#if errors.name}}
+			<div class="row">
+				<span class="col-6 off-6">{{errors.name}}</span>
+			</div>
+		{{/if}}
         <hr>
-
+		
         <div class="row">
             <button class="button-primary off-8 col-4">
-                <i class="fa fa-save"></i> Save changes
+                <i class="fa {{#if isSaving}}fa-spinner fa-spin{{else}}fa-save{{/if}}"></i> Save changes
             </button>
         </div>
     </form>
