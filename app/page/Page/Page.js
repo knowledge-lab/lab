@@ -4,7 +4,7 @@
 
 define([
 	'can',
-	'stache!pocetni.stache'
+	'stache!/app/page/Page/default.stache'
 ], function (can, content) {
 	return can.Control.extend(
 		{

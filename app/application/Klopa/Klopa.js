@@ -1,18 +1,14 @@
 define([
 	'../Application/Application',
+
 	'page/Home/Home',
-	'page/Menus/Menus',
-	'page/Food/Food',
-	'page/Schedule/Schedule',
-	'page/AddFood/AddFood',
-	'page/EditMenu/EditMenu',
-	'page/AddMenu/AddMenu',
-	'page/Signup/Signup',
-	'page/EditFood/EditFood',
 	'page/Index/Index',
-	'page/Login/Login',
-	'page/AddScheduleEntry/AddScheduleEntry'
-], function (Application, Home, Menus, Food, Schedule, AddFood, EditMenu, AddMenu, Signup, EditFood, Index, Login, AddScheduleEntry) {
+
+	'page/menu/menu',
+	'page/food/food',
+	'page/user/user',
+	'page/schedule/schedule'
+], function (Application, Home, Index, menu, food, user, schedule) {
 
 	return Application.extend(
 		{
@@ -22,49 +18,66 @@ define([
 						controller: Home,
 						route: 'home'
 					},
-					{
-						controller: Menus,
-						route: 'menus'
-					},
-					{
-						controller: AddFood,
-						route: 'addfood'
-					},
-					{
-						controller: Food,
-						route: 'food'
-					},
-					{
-						controller: AddMenu,
-						route: 'add-menu'
-					},
-					{
-						controller: Schedule,
-						route: 'schedule'
-					},
-					{
-						controller: EditMenu,
-						route: 'edit-menu/:id'
-					},
-					{
-						controller: Signup,
-						route: 'signup'
-					},
-					{
-						controller: EditFood,
-						route: 'editfood'
-					},
+
 					{
 						controller: Index,
 						route: ''
 					},
+
+					/**
+					 * Food
+					 */
 					{
-						controller: Login,
-						route: 'login'
+						controller: food.Add,
+						route: 'foods/add'
 					},
 					{
-						controller: AddScheduleEntry,
-						route: 'add-schedule-entry'
+						controller: food.List,
+						route: 'foods'
+					},
+					{
+						controller: food.Edit,
+						route: 'foods/:id'
+					},
+
+					/**
+					 * Menu
+					 */
+					{
+						controller: menu.Add,
+						route: 'menus/add'
+					},
+					{
+						controller: menu.Edit,
+						route: 'menus/:id'
+					},
+					{
+						controller: menu.List,
+						route: 'menus'
+					},
+
+					/**
+					 * User
+					 */
+					{
+						controller: user.Signup,
+						route: 'signup'
+					},
+					{
+						controller: user.Login,
+						route: 'login'
+					},
+
+					/**
+					 * Schedule
+					 */
+					{
+						controller: schedule.List,
+						route: 'schedule'
+					},
+					{
+						controller: schedule.Add,
+						route: 'schedule/add'
 					}
 				],
 

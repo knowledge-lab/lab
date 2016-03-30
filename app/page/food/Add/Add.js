@@ -1,18 +1,16 @@
 /**
- * Created by Tatjana on 26-Mar-16.
+ * Created by Milan on 3/26/2016.
  */
-
 define([
-    '../Page/Page',
+    'page/Page/Page',
     'can',
-    'stache!food.stache'
+    'stache!/app/page/food/Add/add.stache'
 ], function (Page, can, content) {
     return Page.extend(
         {
 
         },
         {
-          
             template : content
         }
     );

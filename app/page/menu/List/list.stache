@@ -2,7 +2,7 @@
     <div class="row">
         <h4>
             <span>Menus</span>
-            <a class="fr fs-5" href="/pages/add-menu.html">
+            <a class="fr fs-5" href="/#!menus/add">
                 <i class="fa fa-plus"></i> Add Menu
             </a>
         </h4>
@@ -11,7 +11,7 @@
         <ul>
             {{#each menus}}
                 <li>
-                    <a href="#!edit-menu/{{id}}" class="ttu">{{name}}</a>
+                    <a href="#!menus/{{id}}" class="ttu">{{name}}</a>
                 </li>
             {{/each}}
         </ul>

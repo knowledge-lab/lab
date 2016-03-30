@@ -3,18 +3,17 @@
  */
 
 define([
-	'../Page/Page',
+	'page/Page/Page',
 	'can',
-	'stache!menus.stache',
+	'stache!/app/page/menu/List/list.stache',
 	'model/Menu/Menu'
 ], function (Page, can, content, Menu) {
 	return Page.extend(
+		{},
 		{
-		},
-		{
-			template : content,
+			template: content,
 
-			init : function (element, options) {
+			init: function (element) {
 				var isLoading = can.compute(true);
 
 				var promise = Menu.findAll();

@@ -6,9 +6,9 @@
  */
 
 define([
-    '../Page/Page',
+    'page/Page/Page',
     'can',
-    'stache!add-schedule.stache'
+    'stache!/app/page/schedule/Add/add.stache'
 ], function (Page, can, content) {
     return Page.extend(
         {
