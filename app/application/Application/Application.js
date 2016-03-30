@@ -3,9 +3,8 @@
  */
 
 define([
-	'can',
 	'stache!content.stache'
-], function (can, contentTpl) {
+], function (contentTpl) {
 	return can.Control.extend(
 		{
 			defaults: {

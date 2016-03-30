@@ -10,9 +10,15 @@ var require = {
         stache: "lib/requirejs-canjs-templates/stache",
 
         jquery: 'lib/jquery/dist/jquery',
-        can: "lib/CanJS/amd/can"
+        can: "lib/CanJS/amd/can",
+
+        'validate-lib': 'lib/validate/validate',
+        validate: 'app/lib/validate/validate'
     },
 
     shim: {
+        stache: {
+            deps: ['can']
+        }
     }
 };
