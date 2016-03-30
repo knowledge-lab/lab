@@ -16,5 +16,23 @@
       "name": "neko krace ime",
       "id": 6
     }
+  ],
+  "foods": [
+    {
+      "name": "Sargarepa",
+      "id": 1
+    },
+    {
+      "name": "Luk",
+      "id": 2
+    },
+    {
+      "name": "Przenice",
+      "id": 3
+    },
+    {
+      "name": "Sarme",
+      "id": 4
+    }
   ]
 }

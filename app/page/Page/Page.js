@@ -21,6 +21,10 @@ define([
 				element.html(this.template(options));
 			},
 
+			autoFocus: function () {
+				this.element.find('[autofocus]').first().focus();
+			},
+
 			template : content
 		}
 	);

@@ -1,31 +1,19 @@
- <div class="container v-align narrow">
-        <div class="row">
-            <h4 class="col-12">Menu Details</h4>
-        </div>
-
-        <div class="row">
-            <label class="col-4" for="name">Name: </label>
-            <input class="col-8" type="email" name="name" id="name" autofocus>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-12 rh-5" style="overflow: auto;">
-                <label> <input type="checkbox"> Berghoff Casserole </label>
-                <label> <input type="checkbox"> Salmon and Rock Shrimp Cake </label>
-                <label> <input type="checkbox"> Potato Pierogies </label>
-                <label> <input type="checkbox"> Soft-Boiled Egg </label>
-                <label> <input type="checkbox"> Berghoff Casserole </label>
-                <label> <input type="checkbox"> Scrambled Eggs in Puff Pastry </label>
-                <label> <input type="checkbox"> Eggs Benedict </label>
-                <label> <input type="checkbox"> Eggs Norwegian </label>
-                <label> <input type="checkbox"> Eggs Florentine </label>
-                <label> <input type="checkbox"> Avocado and Poached Eggs on Toast </label>
-            </div>
-        </div>
-        <hr>
-
-        <div class="row">
-            <button class="button-primary off-8 col-4"><i class="fa fa-plus"></i> Add Menu</button>
-        </div>
+<div class="container v-align mid">
+    <div class="row">
+        <h4 class="col-12">Menu Details</h4>
     </div>
+
+    <form data-form="add-menu">
+        <div class="row">
+            <label class="col-6" for="name">Name: </label>
+            <input class="col-6" type="text" name="name" id="name" value="{{menu.name}}" autofocus>
+        </div>
+        <hr>
+
+        <div class="row">
+            <button class="button-primary off-8 col-4">
+                <i class="fa fa-save"></i> Save changes
+            </button>
+        </div>
+    </form>
+</div>
