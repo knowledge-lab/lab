@@ -17,27 +17,67 @@ define([
 		},
 		{
 			init: function (element, options) {
-				var modelView = new can.Map(
+				this.modelView = new can.Map(
 					{
-						menu: new Menu()
+						menu: new Menu(),
+						errors: null,
+						isSaving: false
 					}
 				);
 
-				element.html(options.template(modelView));
+				element.html(options.template(this.modelView));
 
 				this.autoFocus();
 			},
 
 			'[data-form="add-menu"] submit': function (form) {
-				var data = validate.collectFormValues(form);
-
-				new Menu(data).save().then(
-					function () {
-						can.route.attr({route: 'menus'}, true);
-					}
-				);
+				var data, errors;
+				
+				if(this.isSaving()) {
+					return;
+				}
+				
+				this.isSaving(true);
+				
+				data = validate.collectFormValues(form);
+				
+				errors = validate(data, {
+					name: {
+						presence: true,
+						length: {
+							minimum: 2,
+							message: "must be at least 2 characters"
+						}
+					}	
+				});
+				
+				if(errors) {
+					this.setErrors(errors).isSaving(false);
+				} else {
+					new Menu(data).save().then(
+						function () {
+							this.isSaving(false);
+							can.route.attr({route: 'menus'}, true);
+						}
+					);
+				}
 
 				return false;
+			},
+			
+			setErrors: function (errors) {
+				this.modelView.attr('errors', errors);
+
+				return this;
+			},
+			
+			isSaving: function (flag) {
+				if (typeof flag === 'boolean') {
+					this.modelView.attr('isSaving', flag);
+					return this;
+				}
+				
+				return this.modelView.attr('isSaving');
 			}
 		}
 	);

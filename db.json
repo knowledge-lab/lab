@@ -15,6 +15,10 @@
     {
       "name": "neko krace ime",
       "id": 6
+    },
+    {
+      "name": "Test menu",
+      "id": 7
     }
   ],
   "foods": [
