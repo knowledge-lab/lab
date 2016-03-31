@@ -3,7 +3,7 @@ define([
 ], function (Model) {
 	return Model.extend(
 		{
-			resource : 'menus'
+			resource : 'foods'
 		},
 		{
 		}

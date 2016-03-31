@@ -1,0 +1,19 @@
+<div class="container v-align mid">
+    <div class="row">
+        <h4 class="col-12">Menu Details</h4>
+    </div>
+
+    <form data-form="add-menu">
+        <div class="row">
+            <label class="col-6" for="name">Name: </label>
+            <input class="col-6" type="text" name="name" id="name" value="{{menu.name}}" autofocus>
+        </div>
+        <hr>
+
+        <div class="row">
+            <button class="button-primary off-8 col-4">
+                <i class="fa fa-save"></i> Save changes
+            </button>
+        </div>
+    </form>
+</div>

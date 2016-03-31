@@ -2,24 +2,23 @@
     <h1>{{nazivAplikacije}}</h1>
 
     <div class="row">
-        <a class="button col-4" href="/#!menus">Menus</a>
-        <a class="button col-4" href="/#!add-menu">Add Menu</a>
+        <a class="button off-4 col-4" href="/#!menus">Menus</a>
     </div>
+
     <div class="row">
-        <a class="button col-3" href="/#!schedule">Schedule</a>
-        <a class="button col-3" href="/#!add-schedule-entry">Add Entry</a>
+        <a class="button off-4 col-4" href="/#!schedule">Schedule</a>
     </div>
+
     <div class="row">
-        <a class="button col-4 off-2" href="/#!login">Sign In</a>
-        <a class="button col-4" href="#!signup">Sign Up</a>
-    </div>
-    <div class="row">
-        <a class="button col-4" href="#!addfood">Add Food</a>
-        <a class="button col-4" href="/#!food">Food</a>
-        <a class="button col-4" href="/#!editfood">Edit Food</a>
+        <a class="button off-4 col-4" href="/#!foods">Food</a>
     </div>
 
     <div class="row">
         <a class="button col-4 off-4" href="/#!home">Home</a>
+    </div>
+
+    <div class="row">
+        <a class="button col-4 off-2" href="/#!login">Sign In</a>
+        <a class="button col-4" href="#!signup">Sign Up</a>
     </div>
 </div>
