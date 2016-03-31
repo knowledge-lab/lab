@@ -21,14 +21,13 @@ define([
 					{
 						menu: new Menu(),
 						errors: null,
-						isLoading: true,
 						isSaving: false
 					}
 				);
 
 				element.html(options.template(this.modelView));
 
-				this.isLoading(false).autoFocus();
+				this.autoFocus();
 			},
 
 			'[data-form="add-menu"] submit': function (form) {
@@ -57,21 +56,13 @@ define([
 				} else {
 					new Menu(data).save().then(
 						function () {
+							this.isSaving(false);
 							can.route.attr({route: 'menus'}, true);
 						}
 					);
 				}
 
 				return false;
-			},
-			
-			isLoading: function(flag) {
-				if(typeof flag === 'boolean') {
-					this.modelView.attr('isLoading', flag);		
-					return this;
-				}
-				
-				return this.modelView.attr('isLoading');
 			},
 			
 			setErrors: function (errors) {
