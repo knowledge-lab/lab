@@ -58,7 +58,7 @@ define([
 						function () {
 							this.isSaving(false);
 							can.route.attr({route: 'menus'}, true);
-						}
+						}.bind(this)
 					);
 				}
 
