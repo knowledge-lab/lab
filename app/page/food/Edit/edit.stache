@@ -20,8 +20,8 @@
                     </div>
                     {{#if errors.name}}
                         <div class="row">
-                            <span class="col-6 off-6" style="color:red;">{{errors.name}}</span>
-                        </div>
+                            <span class="col-8 off-4 text-danger">{{errors.name}}</span>
+                        </div><br>
                     {{/if}}
 
                     <div class="row">
@@ -33,7 +33,7 @@
                      {{#if errors.description}}
 
                                <div class="row">
-                                    <span class="col-6 off-6" style="color:red;">{{errors.description }}</span>
+                                    <span class="col-8 off-4 text-danger">{{errors.description }}</span>
                                </div>
                       {{/if}}
 
