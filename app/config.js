@@ -1,36 +1,27 @@
-var ENVIRONMENTS = {
-    dev: '',
-    live: 'dist/'
-};
-
-var env = 'live';
-
 var require = {
-    baseUrl: './',
+	baseUrl: './',
 
-    paths: (function() {
-        var root = ENVIRONMENTS[env];
+	paths: (function () {
+		return {
+			application: 'app/application',
+			page       : 'app/page',
+			model      : 'app/model',
 
-        return {
-            application: root + 'app/application',
-            page: root + 'app/page',
-            model: root + 'app/model',
+			text  : 'lib/text/text',
+			stache: "lib/requirejs-canjs-templates/stache",
 
-            text: 'lib/text/text',
-            stache: "lib/requirejs-canjs-templates/stache",
+			jquery: 'lib/jquery/dist/jquery',
+			can   : "lib/CanJS/amd/can",
 
-            jquery: 'lib/jquery/dist/jquery',
-            can: "lib/CanJS/amd/can",
+			'validate-lib': 'lib/validate/validate',
+			validate      : 'app/lib/validate/validate'
+		};
 
-            'validate-lib': 'lib/validate/validate',
-            validate: root + 'app/lib/validate/validate'
-        };
+	})(),
 
-    })(),
-
-    shim: {
-        stache: {
-            deps: ['can']
-        }
-    }
+	shim: {
+		stache: {
+			deps: ['can']
+		}
+	}
 };

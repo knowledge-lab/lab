@@ -37,8 +37,27 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
-                        src: ['app/**', '!app/**/*.js'],
+                        src: ['app/**', '!app/**/*.js', 'assets/font', 'assets/image'],
                         dest: 'dist'
+                    },
+                    {
+                        expand: true,
+                        src: ['index.html'],
+                        dest: 'dist'
+                    },
+                    {
+                        src : 'lib/jquery/dist/jquery.min.js',
+                        dest: 'dist/lib/jquery/dist/jquery.js'
+                    },
+                    {
+                        src : 'lib/validate/validate.js',
+                        dest: 'dist/lib/validate/validate.js'
+                    },
+                    {
+                        cwd: 'lib/components-font-awesome',
+                        src: 'fonts/*',
+                        dest: 'dist/assets/',
+                        expand : true
                     }
                 ]
             }
@@ -47,13 +66,13 @@ module.exports = function (grunt) {
         uglify: {
             dist: {
                 options: {
-                    sourceMap: true
+                    sourceMap: false
                 },
                 files: [{
                     expand: true,
-                    cwd: 'app',
-                    src: '**/*.js',
-                    dest: 'dist/app/'
+                    src: ['app/**/*.js', 'lib/requirejs/*.js', 'lib/CanJS/amd/**/*.js',
+                        'lib/requirejs-canjs-templates/stache.js', 'lib/text/text.js'],
+                    dest: 'dist/'
                 }]
             }
         },
@@ -62,12 +81,12 @@ module.exports = function (grunt) {
             options: {
                 expand: true,
                 shorthandCompacting: false,
-                sourceMap: true,
+                sourceMap: false,
                 roundingPrecision: -1
             },
             target: {
                 files: {
-                    "dist/assets/css/style.min.css": "assets/css/style.css"
+                    "dist/assets/css/style.css": "assets/css/style.css"
                 }
             }
         }
