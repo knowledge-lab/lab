@@ -2,7 +2,7 @@
     {{#if isLoading}}
         <div class="loader"><i class="fa fa-cutlery"></i></div>
     {{else}}
-        <form data-form="add-food">
+        <form data-form="edit-food">
             <div class="row">
                 <h4 class="col-12">Food Details
                     <a href=""
@@ -16,8 +16,8 @@
 
 
         <div class="row">
-            <label class="col-6" for="name">Name: </label>
-            <input class="col-" type="text" name="name" id="name" value="{{food.name}}" autofocus>
+            <label class="col-4" for="name">Name: </label>
+            <input class="col-8" type="text" name="name" id="name" value="{{food.name}}" autofocus>
         </div>
         {{#if errors.name}}
         <div class="row">

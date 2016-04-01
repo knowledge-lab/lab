@@ -41,6 +41,11 @@
     {
       "name": "nesto novo",
       "id": 5
+    },
+    {
+      "name": "ime neko",
+      "description": "neki opis",
+      "id": 6
     }
   ]
 }

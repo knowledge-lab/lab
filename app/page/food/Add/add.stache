@@ -17,6 +17,11 @@
 				<span class="col-6 off-6">{{errors.name}}</span>
 			</div>
 		{{/if}}
+		{{#if errors.description}}
+            <div class="row">
+                <span class="col-6 off-6">{{errors.description}}</span>
+            </div>
+        {{/if}}
         <hr>
 
         <div class="row">
