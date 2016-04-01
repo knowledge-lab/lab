@@ -2,7 +2,6 @@
     {{#if isLoading}}
         <div class="loader"><i class="fa fa-cutlery"></i></div>
     {{else}}
-<<<<<<< HEAD
         <div class="row">
             <h4>
                 <span>Foods</span>
@@ -21,24 +20,5 @@
                 {{/each}}
             </ul>
         </div>
-=======
-    <div class="row">
-        <h4>
-            <span>Food</span>
-            <a class="fr fs-5" href="/#!foods/add">
-                <i class="fa fa-plus"></i> Add Food
-            </a>
-        </h4>
-    </div>
-    <ol>
-        {{#each foods}}
-        <li>
-            <p><b><a href="/#!foods/{{id}}">{{name}}</a></b></p>
-                          <span><i>{{description}}</i></span>
-        </li>
-        <hr>
-        {{/each}}
-    </ol>
->>>>>>> afd96f56d0fe37ac034931873879aec1f9b99d5f
     {{/if}}
 </div>

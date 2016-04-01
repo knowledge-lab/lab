@@ -1,7 +1,7 @@
 {
   "menus": [
     {
-      "name": 5,
+      "name": "Nesto specijalno",
       "id": 3
     },
     {
@@ -43,13 +43,9 @@
       "id": 4
     },
     {
-      "name": "nesto novo",
+      "name": "Lazanje",
+      "description": "Lazanje koje kidaju.",
       "id": 5
-    },
-    {
-      "name": "ime neko",
-      "description": "neki opis",
-      "id": 6
     }
   ]
 }

@@ -1,5 +1,3 @@
-
-
 define([
 	'can',
 	'page/Page/Page',
