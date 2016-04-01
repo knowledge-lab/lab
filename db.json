@@ -41,6 +41,11 @@
       "name": "Sarme",
       "description": "Kud ce Srbin bez sarme",
       "id": 4
+    },
+    {
+      "name": "Lazanje",
+      "description": "Lazanje koje kidaju.",
+      "id": 5
     }
   ]
 }
