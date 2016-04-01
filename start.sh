@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-echo $OPENSHIFT_NODEJS_IP
-echo $OPENSHIFT_NODEJS_PORT
+node_modules/.bin/http-server -p $OPENSHIFT_NODEJS_PORT -a $OPENSHIFT_NODEJS_IP
