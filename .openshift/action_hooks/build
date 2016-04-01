@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-ls node_modules/.bin/
+ls
 
