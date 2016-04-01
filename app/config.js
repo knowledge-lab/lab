@@ -1,20 +1,32 @@
+var ENVIRONMENTS = {
+    dev: '',
+    live: 'dist/'
+};
+
+var env = 'live';
+
 var require = {
     baseUrl: './',
 
-    paths: {
-        application: 'app/application',
-        page: 'app/page',
-        model: 'app/model',
+    paths: (function() {
+        var root = ENVIRONMENTS[env];
 
-        text: 'lib/text/text',
-        stache: "lib/requirejs-canjs-templates/stache",
+        return {
+            application: root + 'app/application',
+            page: root + 'app/page',
+            model: root + 'app/model',
 
-        jquery: 'lib/jquery/dist/jquery',
-        can: "lib/CanJS/amd/can",
+            text: 'lib/text/text',
+            stache: "lib/requirejs-canjs-templates/stache",
 
-        'validate-lib': 'lib/validate/validate',
-        validate: 'app/lib/validate/validate'
-    },
+            jquery: 'lib/jquery/dist/jquery',
+            can: "lib/CanJS/amd/can",
+
+            'validate-lib': 'lib/validate/validate',
+            validate: root + 'app/lib/validate/validate'
+        };
+
+    })(),
 
     shim: {
         stache: {
