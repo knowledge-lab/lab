@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+/**
+ * Created by ivan on 3/26/16.
+ */
+
+>>>>>>> afd96f56d0fe37ac034931873879aec1f9b99d5f
 define([
     'page/Page/Page',
     'can',
