@@ -2,7 +2,6 @@
   "name": "klopa",
   "version": "1.0.0",
   "description": "Klopa, ocene, jelovnici",
-  "main": "Gruntfile.js",
   "scripts": {
     "start": "./start.sh"
   },
