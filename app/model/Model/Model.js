@@ -6,7 +6,7 @@ define([
 			/**
 			 * Podesava url koji ce biti koriscen na nivou svih modela uz dodatak resurs parametra
 			 */
-			serverUrl: window.location.protocol + '//' + window.location.hostname + ':3000',
+			serverUrl: window.location.protocol + '//' + window.location.hostname + ':3000', 
 
 			setup: function () {
 				this.resource = this.serverUrl + '/' + this.resource;
