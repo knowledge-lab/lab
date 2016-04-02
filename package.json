@@ -2,10 +2,9 @@
   "name": "klopa",
   "version": "1.0.0",
   "description": "Klopa, ocene, jelovnici",
-
   "scripts": {
     "start": "./start.sh",
-    "test" : "grunt build"
+    "test": "grunt build"
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.1",
     "grunt-contrib-less": "~0.12.0",
+    "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "~0.6.1"
   },
   "dependencies": {
