@@ -82,6 +82,17 @@ module.exports = function (grunt) {
 					}
 				]
 			}
+		},
+		jasmine:{
+			global:{
+				options:{
+					specs:'specs/*Spec.js',
+					template: require('grunt-template-jasmine-requirejs'),
+					templateOptions:{
+						requireConfigFile: 'app/config.js'
+					}
+				}
+			}
 		}
 	});
 
@@ -90,6 +101,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
 
 	grunt.registerTask('default', ['less']);
 
