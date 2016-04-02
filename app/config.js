@@ -3,9 +3,9 @@ var require = {
 
     paths: (function() {
         return {
-            application: 'dist/app/application',
-            page: 'dist/app/page',
-            model: 'dist/app/model',
+            application: 'app/application',
+            page: 'app/page',
+            model: 'app/model',
 
             text: 'lib/text/text',
             stache: "lib/requirejs-canjs-templates/stache",
@@ -14,7 +14,7 @@ var require = {
             can: "lib/CanJS/amd/can",
 
             'validate-lib': 'lib/validate/validate',
-            validate: 'dist/app/lib/validate/validate'
+            validate: 'app/lib/validate/validate'
         };
 
     })(),
