@@ -24,19 +24,28 @@
   "foods": [
     {
       "name": "Sargarepa",
+      "description": "Dobra je za oci",
       "id": 1
     },
     {
       "name": "Luk",
+      "description": "Od njega se place",
       "id": 2
     },
     {
       "name": "Przenice",
+      "description": "Das ist fantastisch",
       "id": 3
     },
     {
       "name": "Sarme",
+      "description": "Kud ce Srbin bez sarme",
       "id": 4
+    },
+    {
+      "name": "Lazanje",
+      "description": "Lazanje koje kidaju.",
+      "id": 5
     }
   ]
 }
