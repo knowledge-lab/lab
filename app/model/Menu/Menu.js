@@ -3,9 +3,15 @@ define([
 ], function (Model) {
 	return Model.extend(
 		{
-			resource : 'menus'
+			resource : 'menus',
+			defaults:{
+				currentMenu: 'Pizza'
+			}
 		},
 		{
+			getCurrentMenu: function(){
+				return this.currentMenu;
+			}
 		}
 	);
 });

@@ -25,11 +25,24 @@ module.exports = function (grunt) {
                     nospawn: true
                 }
             }
+        },
+
+        jasmine:{
+            global : {
+                options:{
+                    specs:'specs/*Spec.js',
+                    template: require('grunt-template-jasmine-requirejs'),
+                    templateOptions:{
+                        requireConfigFile:'app/config.js'
+                    }
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jasmine');
 
     grunt.registerTask('default', ['less']);
 };

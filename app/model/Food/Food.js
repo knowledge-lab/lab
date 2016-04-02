@@ -6,6 +6,11 @@ define([
 			resource : 'foods'
 		},
 		{
+			
+			test:"djole",
+			getFoodName: function(){
+				return 'Sarma';
+			}
 		}
 	);
 });
