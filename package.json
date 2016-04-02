@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Klopa, ocene, jelovnici",
   "scripts": {
-    "start": "./start.sh"
+    "start": "./start.sh",
+    "test" : "grunt build"
   },
   "repository": {
     "type": "git",
