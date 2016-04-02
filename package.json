@@ -4,7 +4,7 @@
   "description": "Klopa, ocene, jelovnici",
   "scripts": {
     "start": "./start.sh",
-    "test": "grunt build"
+    "test": "grunt nema-sanse-da-radis"
   },
   "repository": {
     "type": "git",
