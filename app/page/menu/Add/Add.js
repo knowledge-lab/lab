@@ -33,7 +33,7 @@ define([
 			'[data-form="add-menu"] submit': function (form) {
 				var data, errors;
 				
-				if(this.isSaving()) {
+				if(this.isSaving() || this.isRemoving()) {
 					return;
 				}
 				
