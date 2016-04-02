@@ -9,7 +9,6 @@ define([
 ], function (Page, can, content) {
 	return Page.extend(
 		{
-
 		},
 		{
 			template : content

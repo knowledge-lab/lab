@@ -1,13 +1,7 @@
 require(
 	[
-		'application/Application/Application',
-		'jquery'
-	], function (Application, $) {
-		this.application = new Application(
-			'main',
-			{
-				nazivAplikacije: 'Test'
-			}
-		);
+		'application/Klopa/Klopa'
+	], function (Klopa) {
+		this.application = new Klopa(window.document.body);
 	}
 );
