@@ -3,13 +3,15 @@ define([
 ], function (Model) {
 	return Model.extend(
 		{
-			resource : 'foods'
+			resource : 'foods',
+			defaults:{
+				jeloDana: 'Burgeri'
+			}
 		},
 		{
-			
-			test:"djole",
-			getFoodName: function(){
-				return 'Sarma';
+
+			getFoodOfTheDay: function(){
+				return this.jeloDana;
 			}
 		}
 	);
