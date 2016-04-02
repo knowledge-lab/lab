@@ -6,7 +6,7 @@ define([
 			/**
 			 * Podesava url koji ce biti koriscen na nivou svih modela uz dodatak resurs parametra
 			 */
-			serverUrl: 'http://api-klopa.rhcloud.com/',
+			serverUrl: 'http://api-klopa.rhcloud.com',
 
 			setup: function () {
 				this.resource = this.serverUrl + '/' + this.resource;
