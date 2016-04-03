@@ -1,4 +1,7 @@
 <div class="container v-align narrow">
+    {{#if isLoading}}
+        <div class="loader"><i class="fa fa-cutlery"></i></div>
+    {{else}}
     <div class="row">
         <h4>
             <span>Schedule</span>
@@ -8,47 +11,14 @@
         </h4>
     </div>
     <ul>
+        {{#each schedule}}
         <li class="ell">
-            <span class="date">Fri 19/12/2015</span>
-            <a href="/#!menus/4"> HORS D’ŒUVRES </a>
+            <span class="date">{{date}}</span>
+            <a href="/#!menus/{{id}}"> {{name}} </a>
                 <span class="fr cursorPointer">
                     <a href="javascript:void(0)"><i class="pl5 fa fa-trash-o"></i></a>
                 </span>
         </li>
-        <li class="ell">
-            <span class="date">Mon 21/11/2015</span>
-            <a href="/#!menus/4"> LE BALTHAZAR </a>
-                <span class="fr cursorPointer">
-                    <a href="javascript:void(0)"><i class="pl5 fa fa-trash-o"></i></a>
-                </span>
-        </li>
-        <li class="ell">
-            <span class="date">Fri 18/12/2015</span>
-            <a href="/#!menus/4"> HORS D’ŒUVRES </a>
-                <span class="fr cursorPointer">
-                    <a href="javascript:void(0)"><i class="pl5 fa fa-trash-o"></i></a>
-                </span>
-        </li>
-        <li class="ell">
-            <span class="date">Sat 18/02/2016</span>
-            <a href="/#!menus/4"> LE BALTHAZAR </a>
-                <span class="fr cursorPointer">
-                    <a href="javascript:void(0)"><i class="pl5 fa fa-trash-o"></i></a>
-                </span>
-        </li>
-        <li class="ell">
-            <span class="date">Fri 18/02/2016</span>
-            <a href="/#!menus/4"> HORS D’ŒUVRES </a>
-                <span class="fr cursorPointer">
-                    <a href="javascript:void(0)"><i class="pl5 fa fa-trash-o"></i></a>
-                </span>
-        </li>
-        <li class="ell">
-            <span class="date">Fri 18/02/2016</span>
-            <a href="/#!menus/4"> SAUTÉED </a>
-                <span class="fr cursorPointer">
-                    <a href="javascript:void(0)"><i class="pl5 fa fa-trash-o"></i></a>
-                </span>
-        </li>
+        {{/each}}
     </ul>
 </div>
