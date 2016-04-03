@@ -18,7 +18,12 @@ define([
 			init: function (element) {
                 var isLoading = can.compute(true);
 
-                var promise = Schedule.findAll();
+                var promise = Schedule.findAll({
+	                /**
+	                 * Saljemo na server _expand parametar kako bismo dobili i objekat menija u samom schedule objektu
+	                 */
+	                '_expand' : 'menu'
+                });
 
                 promise.always(
                     function () {

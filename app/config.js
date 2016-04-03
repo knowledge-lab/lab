@@ -12,6 +12,9 @@ var require = {
         jquery: 'lib/jquery/dist/jquery',
         can: "lib/CanJS/amd/can",
 
+        'moment-lib': "lib/moment/moment",
+        moment: "app/lib/moment/moment",
+
         'validate-lib': 'lib/validate/validate',
         validate: 'app/lib/validate/validate'
     },
