@@ -12,13 +12,14 @@
     </div>
     <ul>
         {{#each schedule}}
-        <li class="ell">
-            <span class="date">{{date}}</span>
-            <a href="/#!menus/{{id}}"> {{name}} </a>
+            <li class="ell">
+                <span class="date">{{date}}</span>
+                <a href="/#!menus/{{id}}"> {{name}} </a>
                 <span class="fr cursorPointer">
                     <a href="javascript:void(0)"><i class="pl5 fa fa-trash-o"></i></a>
                 </span>
-        </li>
+            </li>
         {{/each}}
     </ul>
+    {{/if}}
 </div>
