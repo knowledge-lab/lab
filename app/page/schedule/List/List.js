@@ -22,7 +22,8 @@ define([
 				this.modelView = new can.Map(
 					{
 						schedule:null,
-						isLoading: true
+						isLoading: true,
+						isRemoving: false
 					}
 				);
 
@@ -33,6 +34,7 @@ define([
             },
 
             setSchedules: function () {
+
             	var promise = Schedule.findAll({
 	                /**
 	                 * Saljemo na server _expand parametar kako bismo dobili i objekat menija u samom schedule objektu
@@ -40,13 +42,14 @@ define([
 	                '_expand' : 'menu'
                 }); 
 
-                var that = this;
+            	this.modelView.attr('isLoading', true);
 
 				promise.always(
                     function () {
-                        that.modelView.attr('isLoading', false);
-                    }
+                        this.modelView.attr('isLoading', false);
+                    }.bind(this)
                 );
+
 				this.modelView.attr('schedule', new Schedule.List(promise));
 
 				/**
@@ -58,12 +61,14 @@ define([
             removeSchedule: function(link, event){
      
             	event.preventDefault();
-            	var that = this;
 
-            	Schedule.destroy(event.target.id).then(
+            	this.modelView.attr('isRemoving', true);
+
+            	Schedule.destroy(link.data('id')).then(
             		function (){
-            			that.setSchedules();
-            		});
+            			this.setSchedules();
+            			this.modelView.attr('isRemoving', false);
+            		}.bind(this));
             },
 
             getSchedule: function () {
