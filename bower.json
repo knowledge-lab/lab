@@ -24,6 +24,7 @@
     "CanJS": "canjs#^2.3.21",
     "requirejs-canjs-templates": "0.3.0",
     "text": "requirejs-text#^2.0.14",
-    "validate": "validate.js#^0.9.0"
+    "validate": "validate.js#^0.9.0",
+    "moment": "momentjs#^2.12.0"
   }
 }
