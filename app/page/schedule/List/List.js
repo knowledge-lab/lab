@@ -10,34 +10,69 @@ define([
 ], function (Page, can, content, Schedule) {
 	return Page.extend(
 		{
-
+			defaults: {
+				
+				template: content
+			}
 		},
 		{
-			template : content,
 
-			init: function (element) {
-                var isLoading = can.compute(true);
+			init: function (element, options) {
 
-                var promise = Schedule.findAll({
+				this.modelView = new can.Map(
+					{
+						schedule:null,
+						isLoading: true,
+						isRemoving: false
+					}
+				);
+
+				element.html(options.template(this.modelView));
+
+				this.setSchedules();
+
+            },
+
+            setSchedules: function () {
+
+            	var promise = Schedule.findAll({
 	                /**
 	                 * Saljemo na server _expand parametar kako bismo dobili i objekat menija u samom schedule objektu
 	                 */
 	                '_expand' : 'menu'
-                });
+                }); 
 
-                promise.always(
+            	this.modelView.attr('isLoading', true);
+
+				promise.always(
                     function () {
-                        isLoading(false);
-                    }
+                        this.modelView.attr('isLoading', false);
+                    }.bind(this)
                 );
 
-                element.html(
-                    this.template({
-                        schedule: new Schedule.List(promise),
-                        isLoading: isLoading
-                    })
-                );
-            }
+				this.modelView.attr('schedule', new Schedule.List(promise));
+
+				/**
+				 * Omogucavamo uvezivanje metoda
+				 */
+				return this;
+			},
+
+            removeSchedule: function(link, event){
+     
+            	event.preventDefault();
+
+            	this.modelView.attr('isRemoving', true);
+
+            	Schedule.destroy(link.data('id')).then(
+            		function (){
+            			this.modelView.attr('isRemoving', false);
+            			this.setSchedules();        			
+            		}.bind(this));
+            },
+
+            '[data-action="remove-schedule"] click': 'removeSchedule'
+
 		}
 	);
 });

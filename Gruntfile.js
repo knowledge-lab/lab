@@ -48,6 +48,10 @@ module.exports = function (grunt) {
 						dest: 'dist/lib/jquery/dist/jquery.js'
 					},
 					{
+						src: 'lib/moment/min/moment.min.js',
+						dest: 'dist/lib/moment/moment.js'
+					},
+					{
 						src: 'lib/validate/validate.min.js',
 						dest: 'dist/lib/validate/validate.js'
 					},
