@@ -66,21 +66,12 @@ define([
 
             	Schedule.destroy(link.data('id')).then(
             		function (){
-            			this.setSchedules();
             			this.modelView.attr('isRemoving', false);
+            			this.setSchedules();        			
             		}.bind(this));
             },
 
-            getSchedule: function () {
-				return this.modelView.attr('schedule');
-			},
-
             '[data-action="remove-schedule"] click': 'removeSchedule'
-
-
-
-
-
 
 		}
 	);
