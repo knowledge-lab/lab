@@ -16,7 +16,9 @@ var require = {
         moment: "app/lib/moment/moment",
 
         'validate-lib': 'lib/validate/validate',
-        validate: 'app/lib/validate/validate'
+        validate: 'app/lib/validate/validate',
+
+        'datepicker': 'lib/datepicker/dist/datepicker'
     },
 
     shim: {
