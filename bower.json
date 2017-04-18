@@ -20,7 +20,6 @@
     "normalize-css": "latest",
     "components-font-awesome": "^4.5.0",
     "requirejs": "^2.2.0",
-    "jquery": "^2.2.2",
     "CanJS": "canjs#^2.3.21",
     "requirejs-canjs-templates": "0.3.0",
     "text": "requirejs-text#^2.0.14",
